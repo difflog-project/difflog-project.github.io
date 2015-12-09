@@ -1,0 +1,14 @@
+# this goes inside _config.yml. Change as required
+navigation:
+        - text: Home
+          url: /index.html
+        - text: Download
+          url: /download.html
+        - text: Publications
+          url: /pubs.html
+        - text: Documentation
+          url: /docs.html
+        - text: DataSet
+          url: /data.html
+        - text: People
+          url: /people.html
