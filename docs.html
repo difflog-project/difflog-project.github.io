@@ -1,0 +1,58 @@
+---
+title: 'Fusion: A Solver for Mixed Hard and Soft Constraints'
+layout: default
+---
+
+<div class="row">
+	<div class="page-header" class="col-lg-12">
+		<h3>Setup</h2>
+	</div>
+	<div class="col-lg-12">
+		<p>To use <b>{{site.toolname}}</b>, we need to first install and configure the PostgreSQL database, and provide a configuration file to help <b>{{site.toolname}}</b> find the software it depends on.</p>
+		<ol>
+			<li>Install PostgreSQL.
+			<p>
+				<a href="http://www.postgresql.org/ftp/source/v9.3.4/">Download</a> and unpack the source of PostgreSQL.
+				Let <i>PG_DIST</i> be the path where the source is unpaked and <i>PG_INSTALL</i> be the path where
+				you want PostgreSQL to be installed, then build and install PostgreSQL as follows:				
+			</p>				
+
+<pre><code>cd PG_DIST 							
+./configure –prefix=PG_INSTALL
+make; make install 
+cd PG_DIST/contrib/intarray 
+make; make install				
+cd PG_DIST/contrib/intagg 
+make; make install</code></pre>
+			<p>
+				Then configure PostgreSQL as follows:
+<pre><code>cd PG_INSTALL/bin
+./initdb -D ../data
+./pg_ctl -D ../data/ -l ../log  start
+./createuser -s -P fusion
+# Provide a password you like, e.g., fusion
+./createdb fusiondb
+</code></pre>
+				</p>
+			</li>
+			<li>Define a configuration file.
+<p>Below is an example configuration file, which we refer to as "fusion.conf".</p>
+<pre><code>db_url = jdbc:postgresql://localhost:5432/fusiondb
+
+# Database username; must be a superuser
+db_username = fusion
+
+# The password for db_username
+db_password = fusion
+
+# The working directory; Tuffy may write sizable temporary data here
+dir_working = &#60;work-dir&#62;
+
+maxsat = &#60;path&#62;
+lbx = &#60;path&#62;
+mcsls = &#60;path&#62;</code></pre>
+			</li>
+		</ol>
+	</div>
+</div>
+

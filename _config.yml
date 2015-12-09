@@ -4,11 +4,13 @@ navigation:
           url: /index.html
         - text: Download
           url: /download.html
-        - text: Publications
-          url: /pubs.html
         - text: Documentation
           url: /docs.html
-        - text: DataSet
+        - text: Publications
+          url: /pubs.html
+        - text: Datasets
           url: /data.html
         - text: People
           url: /people.html
+
+toolname: Fusion

@@ -2,23 +2,28 @@
 title: 'Fusion: A Solver for Mixed Hard and Soft Constraints'
 layout: default
 ---
-<div class="top-header"  >
+<div class="top"  >
 	<div class="row">
-		<div class="col-lg-2 col-md-6 col-sm-6 hidden-xs nopadding vcenter">
-			<img src="{{site.baseurl}}/images/logo.png" width="100%"  alt="" class="alignleft border"/>
+		<div class="col-lg-1 col-md-1 col-sm-1 hidden-xs nopadding vcenter">
+			<img src="{{site.baseurl}}/images/logo.png" width="150%"  alt="" class="alignleft border"/>
 		</div>
-		<div class="col-lg-10 col-md-6 col-sm-6 col-xs-12 nopadding vcenter">
-			<br/>
-			<h1 id = "logo">Fusion: A Solver for Mixed Hard and Soft Constraints</h1>
+		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 nopadding vcenter">
+			<h1 id = "logo">{{site.toolname}}: A Solver for Mixed Hard and Soft Constraints</h1>
 		</div>
 	</div>
+	</br>
+		<div class="row">
+			<p> <b> {{site.toolname}} </b> is a solver for solving a system of mixed hard and soft constraints.
+			Many inference tasks in diverse application domains such as machine learning, information retrieval, mathematical optimization, 
+			and many others require optimizing certain objectives in addition to satisfying soundness conditions. 
+			A natural specification for such tasks appears in the form of relational constraints with optional weights in logics.
+			The relational inference problem in such logics seeks a solution that satisfies all unweighted (“hard”) constraints while maximizing the sum of the weights of satisfied weighted (“soft”) constraints. 
+			Hard constraints thus enable to express soundness conditions while soft constraints allow to express the objectives to optimize.
+			<b>{{site.toolname}}</b> uses <a href="https://en.wikipedia.org/wiki/Markov_logic_network">Markov Logic Network</a> (MLN) to express such system of mixed constraints.</p>
+		</div>
+
 </div>
 
-<div class="row">
-	<div class="col-lg-12 col-md-12 col-sm-12">
-
-	</div>
-</div>
 
 <div class="row">
 	<div class="page-header" class="col-lg-12">
@@ -30,8 +35,8 @@ layout: default
 		<li>	<b>	{{news.date}}: </b>
 				{{news.content}}
 		</li>
+		{% endfor %}
 	</ul>
 		</div>
-		{% endfor %}
 	</div>
 </div>
