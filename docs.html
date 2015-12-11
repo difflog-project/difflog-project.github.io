@@ -1,5 +1,5 @@
 ---
-title: 'Fusion: A Solver for Mixed Hard and Soft Constraints'
+title: 'Nichrome: A Solver for Mixed Hard and Soft Constraints'
 layout: default
 ---
 
@@ -29,30 +29,100 @@ make; make install</code></pre>
 <pre><code>cd PG_INSTALL/bin
 ./initdb -D ../data
 ./pg_ctl -D ../data/ -l ../log  start
-./createuser -s -P fusion
-# Provide a password you like, e.g., fusion
-./createdb fusiondb
+./createuser -s -P {{site.toolname}}
+# Provide a password you like, e.g., {{site.toolname}}
+./createdb {{site.toolname}}db
 </code></pre>
 				</p>
 			</li>
 			<li>Define a configuration file.
-<p>Below is an example configuration file, which we refer to as "fusion.conf".</p>
-<pre><code>db_url = jdbc:postgresql://localhost:5432/fusiondb
+<p>Below is an example configuration file, which we will refer to as "{{site.toolname}}.conf".</p>
+<pre><code>db_url = jdbc:postgresql://localhost:5432/{{site.toolname}}db
 
 # Database username; must be a superuser
-db_username = fusion
+db_username = {{site.toolname}}
 
 # The password for db_username
-db_password = fusion
+db_password = {{site.toolname}}
 
-# The working directory; Tuffy may write sizable temporary data here
+# The working directory; {{site.toolname}} may write sizable temporary data here
 dir_working = &#60;work-dir&#62;
 
-maxsat = &#60;path&#62;
-lbx = &#60;path&#62;
-mcsls = &#60;path&#62;</code></pre>
+maxsat = &#60;path of the MaxSAT solver&#62;
+lbx = &#60;path of lbx&#62;
+mcsls = &#60;path of mcsls&#62;</code></pre>
 			</li>
 		</ol>
 	</div>
 </div>
 
+<div class="row">
+	<div class="page-header" class="col-lg-12">
+		<h3>Inference</h2>
+	</div>
+	<div class="col-lg-12">
+		<p><b>{{site.toolname}}</b> currently supports <a href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">MAP</a> inference for MLN programs.
+			Below is an example MLN program for the graph reachability problem, which we refer to as "graph.mln"
+		</p>
+		<pre>
+// graph.mln
+// Define the relations. The "*" means closed-world assumption holds for the specified realtion. Otherwise, open-world assumption is applied.
+*edge(node,node)
+path(node,node)
+
+// Reflexivity
+path(n,n).
+// If there is a edge from n1 to n2, and there is a path from n2 to n3, then there is a path from n1 to n3. 
+// This rule can also be written as 
+// !edge(n1,n2) v !path(n2,n3) v path(n1,n3)
+edge(n1,n2),path(n2,n3) => path(n1,n3).
+
+// Least-fix-point contraint. Do not derive unnecessary paths.
+1 !path(n1,n2)</pre>
+	<p>
+		The file below ("graph.edb") is an input file which defines a graph a --> b --> c.
+	</p>
+
+<pre>
+// graph.edb
+edge(a,b)
+edge(b,c)
+</pre>
+	<p>
+		To solve the graph reachability on the graph defined above, we run {{site.toolname}} using the command below:
+<pre>
+java -jar {{site.toolname}}.jar -conf {{site.toolname}}.conf -e graph.edb  -r result.txt  -i graph.mln -verbose 2 -solver lbxmcs  -lbxTimeout 18000 -lbxLimit 1 -printVio > log.txt
+</pre>
+{{site.toolname}} will output the result to "result.txt". Below is the content of it after runing the above command.
+	</p>
+<pre>
+// 0 Optimum value: 3.0
+// 1 The following variables should be set to true: 
+edge(a,b)
+edge(b,c)
+path(a,a)
+path(b,b)
+path(c,c)
+path(b,c)
+path(a,b)
+path(a,c)
+
+// 2 The following grounded clauses are not satified: 
+// 1.0: NOT path(a,a)
+// 1.0: NOT path(b,b)
+// 1.0: NOT path(c,c)
+// 1.0: NOT path(b,c)
+// 1.0: NOT path(a,b)
+// 1.0: NOT path(a,c)	
+</pre>
+<p>For details about the command options, please run "java -jar {{site.toolname}}.jar -help".</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="page-header" class="col-lg-12">
+		<h3>Learning</h2>
+	</div>
+	<div class="col-lg-12">
+	</div>
+</div>
