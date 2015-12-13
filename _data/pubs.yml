@@ -11,19 +11,21 @@
 #  type:
 
 - title: "Scaling Relational Inference Using Proofs and Refutations"
-  conference: "<b>AAAI 2016</b>: Conference on Artificial Intelligence. (<i>To Appear</i>)"
+  conference: "<b>AAAI 2016</b>: Conference on Artificial Intelligence."
   authors: "Ravi Mangal, Xin Zhang, Aditya Kamath, Aditya Nori, and Mayur Naik."
+  paper: papers/aaai16.pdf
   type: tech
 
 - title: "Query-Guided Maximum Satisfiability"
   conference: "<b>POPL 2016</b>: ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages. (<i>To Appear</i>)"
   authors: "Xin Zhang, Ravi Mangal, Aditya Nori, and Mayur Naik."
+  paper: papers/popl16.pdf
   type: tech
 
 - title: "Volt: A Lazy Grounding Framework for Solving Very Large MaxSAT Instances"
   conference: "<b>SAT 2015</b>: International Conference on Theory and Applications of Satisfiability Testing."
   authors: "Ravi Mangal, Xin Zhang, Aditya Nori, and Mayur Naik."
-  paper: /papers/sat15.pdf
+  paper: papers/sat15.pdf
   type: tech
 
 
@@ -31,16 +33,16 @@
   conference: "<b>FSE 2015</b>: ACM Symposium on Foundations of Software Engineering."
   authors: "Ravi Mangal, Xin Zhang, Aditya Nori, and Mayur Naik."
   award: "Distinguished Paper Award"
-  paper: /papers/fse15a.pdf
+  paper: papers/fse15a.pdf
   type: app
 
 - title: "On Abstraction Refinement for Program Analyses in Datalog"
   conference: "<b>PLDI 2014</b>: ACM SIGPLAN Conference on Programming Language Design and Implementation."
   authors: "Xin Zhang, Ravi Mangal, Radu Grigore, Mayur Naik and Hongseok Yang."
   award: "Distinguished Paper Award"
-  paper: /papers/pldi14a.pdf
-  long: /papers/pldi14a-long.pdf
-  slides: /slides/pldi14a.pptx
+  paper: papers/pldi14a.pdf
+  long: papers/pldi14a-long.pdf
+  slides: slides/pldi14a.pptx
 #  poster: /posters/pldi14a.pdf
 #  code: "Implementation Available in <a href=\"https://code.google.com/p/jchord/\">JChord</a>"
 #  howto: /pages/pldi14a-howto.html
