@@ -3,3 +3,33 @@ title: 'Fusion: A Solver for Mixed Hard and Soft Constraints'
 layout: default
 ---
 
+<div class="row top">
+	<div class="col-lg-12">
+		<p> TBD</p>
+		<table class="table">
+					<tr>
+			<th>
+				Benchmark
+			</th>
+			<th>
+				Source
+			</th>
+			<th>
+				# Clauses
+			</th>
+			<th>
+				# Variables
+			</th>
+		</tr>
+			{% for d in site.data.benches %}
+				<tr>
+					<td> <a href="{{d.link}}"> {{d.name}} </a> </td>
+					<td> {{d.source}} </td>
+					<td> {{d.numClauses}} </td>
+					<td> {{d.numVars}} </td>	
+				</tr>	
+			{% endfor%}
+		</table>
+	</div>
+	</div>
+</div>

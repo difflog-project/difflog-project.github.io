@@ -41,8 +41,8 @@
   authors: "Xin Zhang, Ravi Mangal, Radu Grigore, Mayur Naik and Hongseok Yang."
   award: "Distinguished Paper Award"
   paper: papers/pldi14a.pdf
-  long: papers/pldi14a-long.pdf
-  slides: slides/pldi14a.pptx
+#  long: papers/pldi14a-long.pdf
+#  slides: slides/pldi14a.pptx
 #  poster: /posters/pldi14a.pdf
 #  code: "Implementation Available in <a href=\"https://code.google.com/p/jchord/\">JChord</a>"
 #  howto: /pages/pldi14a-howto.html
