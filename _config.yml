@@ -8,8 +8,8 @@ navigation:
           url: /docs.html
         - text: Publications
           url: /pubs.html
-        - text: Datasets
-          url: /data.html
+#        - text: Datasets
+#          url: /data.html
         - text: People
           url: /people.html
 
