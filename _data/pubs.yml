@@ -10,6 +10,12 @@
 #  other:
 #  type:
 
+- title: "On Incremental Core-Guided MaxSAT Solving."
+  conference: "<b>CP 2016</b>: The 22nd International Conference on Principles and Practice of Constraint Programming"
+  authors: "Xujie Si, Xin Zhang, Vasco Manquinho, Mikolas Janota, Alexey Ignatiev, Mayur Naik."
+  paper: papers/cp16.pdf
+  type: tech
+
 - title: "Scaling Relational Inference Using Proofs and Refutations"
   conference: "<b>AAAI 2016</b>: Conference on Artificial Intelligence."
   authors: "Ravi Mangal, Xin Zhang, Aditya Kamath, Aditya Nori, and Mayur Naik."
