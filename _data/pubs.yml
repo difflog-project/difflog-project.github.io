@@ -10,6 +10,22 @@
 #  other:
 #  type:
 
+- title: "Maximum Satisfiability in Program Analysis: Applications and Techniques"
+  conference: "VMCAI 2018: International Conference on Verification, Model Checking, and Abstract Interpretation"
+  authors: "Xujie Si, Xin Zhang, Radu Grigore, and Mayur Naik"
+  award: "Invited Tutorial"
+  paper: papers/vmcai18.pdf
+  type: tech
+
+- title: "Maximum Satisfiability in Software Analysis: Applications and Techniques"
+  conference: "CAV 2017: International Conference on Computer Aided Verification"
+  authors: "Xujie Si, Xin Zhang, Radu Grigore, and Mayur Naik"
+  award: "Invited Tutorial"
+  slides: "http://www.cis.upenn.edu/~mhnaik/slides/cav17.pptx"
+  video: "https://www.youtube.com/watch?v=GCOCAedb54E"
+  paper: papers/cav17.pdf
+  type: tech
+
 - title: "On Incremental Core-Guided MaxSAT Solving."
   conference: "<b>CP 2016</b>: The 22nd International Conference on Principles and Practice of Constraint Programming"
   authors: "Xujie Si, Xin Zhang, Vasco Manquinho, Mikolas Janota, Alexey Ignatiev, Mayur Naik."

@@ -12,5 +12,7 @@ navigation:
 #          url: /data.html
         - text: People
           url: /people.html
+        - text: Sponsors
+          url: /acks.html
 
 toolname: Nichrome
