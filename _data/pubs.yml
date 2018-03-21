@@ -9,16 +9,28 @@
 #  code:
 #  other:
 #  type:
-
+  
 - title: "Maximum Satisfiability in Program Analysis: Applications and Techniques"
-  conference: "VMCAI 2018: International Conference on Verification, Model Checking, and Abstract Interpretation"
+  conference: "<b>VMCAI 2018</b>: International Conference on Verification, Model Checking, and Abstract Interpretation"
   authors: "Xujie Si, Xin Zhang, Radu Grigore, and Mayur Naik"
   award: "Invited Tutorial"
   paper: "http://www.seas.upenn.edu/~mhnaik/pubs/vmcai18.pdf"
   type: tech
 
+- title: "Combining the Logical and the Probabilistic in Program Analysis"
+  conference: "<b>MAPL 2017</b>: ACM SIGPLAN Workshop on Machine Learning and Programming Languages"
+  authors: "Xin Zhang, Xujie Si, and Mayur Naik"
+  paper: "http://www.cis.upenn.edu/~mhnaik/papers/mapl17.pdf"
+  type: app
+  
+- title: "Effective Interactive Resolution of Static Analysis Alarms"
+  conference: "<b>OOPSLA 2017</b>: ACM conference on Object-Oriented Programming, Systems, Languages & Applications"
+  authors: "Xin Zhang, Radu Grigore, Xujie Si, and Mayur Naik"
+  paper: "http://www.cis.upenn.edu/~mhnaik/papers/oopsla17.pdf"
+  type: app
+  
 - title: "Maximum Satisfiability in Software Analysis: Applications and Techniques"
-  conference: "CAV 2017: International Conference on Computer Aided Verification"
+  conference: "<b>CAV 2017</b>: International Conference on Computer Aided Verification"
   authors: "Xujie Si, Xin Zhang, Radu Grigore, and Mayur Naik"
   award: "Invited Tutorial"
   slides: "http://www.cis.upenn.edu/~mhnaik/slides/cav17.pptx"
